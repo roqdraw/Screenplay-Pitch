@@ -45,6 +45,10 @@ get '/about' do
   erb :about
 end
 
+get '/about/2' do
+  erb :about2
+end
+
 get '/pitches' do
   @pitches = Pitch.all
   @users = User.all
