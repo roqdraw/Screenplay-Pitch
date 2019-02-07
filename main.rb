@@ -191,7 +191,7 @@ end
 
 get '/my_profile/:id' do
   @user = User.find_by(id: current_user.id)
-  @buyer = Buyer.find_by(id: current_buyer.id)
+  # @buyer = Buyer.find_by(id: current_buyer.id)
   erb :my_profile
 end
 

@@ -2,7 +2,7 @@
 
 <% @pitches.each do |pitch| %>
     <div class="pitch-box">
-    <p><a class="link" href="/pitches/<%= pitch.id %>"><%= pitch.title%></a></p>  
+    <h3><a class="pitch-link" href="/pitches/<%= pitch.id %>"><%= pitch.title%></a></h3>  
     <% @users.select do |user| %>
         <% if user.id == pitch.user_id %>
             <p class="author">By <%= user.name %></p>

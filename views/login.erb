@@ -1,21 +1,23 @@
-<% if logged_in? %>
-    <p>You're already logged in!</p>
-    <a class="link" href="/">Go Back</a>
-<% else %>
-    <h1>Hello, fellow Writer.</h1>
+<div class="signup">
+    <% if logged_in? %>
+        <p>You're already logged in!</p>
+        <a class="link" href="/">Go Back</a>
+    <% else %>
+        <h1>Hello, fellow Writer.</h1>
 
-    <form action="/session" method="post">
-    <input type="hidden" name="user_type" value="user">
+        <form action="/session" method="post">
+        <input type="hidden" name="user_type" value="user">
 
-    <label for="">Email:</label>
-    <input name="email" type="text">
+        <label for="">Email:</label>
+        <input name="email" type="text">
 
-    <label for="">Password:</label>
-    <input name="password" type="password">
+        <label for="">Password:</label>
+        <input name="password" type="password">
 
-    <button>Login</button>
+        <button>Login</button>
 
-    </form>
+        </form>
 
-    <a class="link" href="/">Go Back</a>
-<% end %>
+        <a class="link" href="/">Go Back</a>
+    <% end %>
+</div>
