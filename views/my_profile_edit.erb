@@ -1,0 +1,19 @@
+<form action="/my_profile/<%= current_user.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <label for="">Name</label>
+    <input name="name" type="text" value="<%= @user.name %>">
+
+    <label for="">Bio</label>
+    <textarea name="bio"><%= @user.bio %></textarea>
+
+    <label for="">Country</label>
+    <input name="country" type="text" value="<%= @user.country %>">
+
+    <label for="">Employment Status</label>
+    <input name="employment_status" type="text" value="<%= @user.employment_status %>">
+
+    <button>Submit</button>
+</form>
+
+<p><a class="link" href="/my_profile/<%= current_user.id %>">Go Back to Profile</a></p>

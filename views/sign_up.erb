@@ -1,0 +1,37 @@
+<% if logged_in? %>
+    <p>Sign out first so we can welcome a new writer.</p>
+    <a class="link" href="/">Go Back</a>
+    <form action="/session" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button class="button">Sign Out</button>
+    </form>
+<% else %>
+    <h1>Hello, New Writer!</h1>
+
+    <h3>Let's get your info ready:</h3>
+
+    <form action="/sign_up" method="post">
+
+    <label for="">Name</label>
+    <input name="name" type="text">
+
+    <label for="">Email</label>
+    <textarea name="email"></textarea>
+
+    <label for="">Password</label>
+    <input name="password" type="password">
+
+    <label for="">Bio</label>
+    <textarea name="bio" type="text"></textarea>
+
+    <label for="">Country</label>
+    <input name="country" type="text">
+
+    <label for="">Employment Status</label>
+    <input name="employment_status" type="text">
+
+    <button>Submit</button>
+    </form>
+
+    <a class="link" href="/type_of">Go Back</a>
+<% end %>

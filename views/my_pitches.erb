@@ -1,0 +1,8 @@
+<h2>My Pitches</h2>
+
+<% @pitches.each do |pitch| %>
+    <div class="pitch-box">
+        <p><a class="link" href="/pitches/<%= pitch.id %>"><%= pitch.title%></a></p>
+    </div>
+<% end %>
+

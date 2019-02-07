@@ -1,0 +1,27 @@
+<h1>Ready to pitch your Million-Dollar Story?</h1>
+
+<div class="pitch">
+    <form action="/pitches" method="post">
+
+        <label for="">Title</label>
+        <input name="title" type="text">
+
+        <label for="">Synopsis</label>
+        <textarea name="synopsis"></textarea>
+
+        <label for="">Genre</label>
+        <select name="id">
+            <% @genres.each do |genre| %>
+            <option value="<%= genre.id %>"><%= genre.name %></option>
+        <% end %>
+        </select>
+
+        <label for="">Structural Element</label>
+        <input name="structural_element" type="text">
+
+        <label for="">Film Comparison</label>
+        <input name="film_comparison" type="text">
+
+        <button>Upload Pitch</button>
+    </form>
+</div>

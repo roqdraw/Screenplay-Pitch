@@ -1,0 +1,19 @@
+
+<h1>My Profile!</h1>
+
+<p>Name: <%= @user.name %></p>
+
+<p>Email: <%= @user.email %></p>
+
+<p>Country: <%= @user.country %></p>
+
+<p>Status: <%= @user.employment_status %></p>
+
+<div class="bio">
+<h4>Bio:</h4>
+<p><%= @user.bio %></p>
+</div>
+
+<p><a class="link" href="/my_profile/<%= current_user.id %>/edit">Edit Profile</a></p>
+
+<p><a class="link" href="/settings/<%= current_user.id %>/edit">Settings</a></p>

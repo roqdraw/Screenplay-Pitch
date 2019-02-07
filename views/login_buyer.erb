@@ -1,0 +1,21 @@
+<% if logged_in? %>
+    <p>You're already logged in!</p>
+    <a class="link" href="/">Go Back</a>
+<% else %>
+    <h1>Hello, fellow Buyer.</h1>
+
+    <form action="/session" method="post">
+    <input type="hidden" name="user_type" value="buyer">
+
+    <label for="">Email:</label>
+    <input name="email" type="text">
+
+    <label for="">Password:</label>
+    <input name="password" type="password">
+
+    <button>Login</button>
+
+    </form>
+
+    <a class="link" href="/">Go Back</a>
+<% end %>

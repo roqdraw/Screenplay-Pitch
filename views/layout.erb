@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="nav-bar">
+        <div class="menu">
+          <a class="all" href="/">Home</a>
+          <a class="all" href="/about">About</a>
+          <a class="all" href="/pitches">Pitches</a>
+          <a class="all" href="/profiles">Writers</a>
+        </div>
+
+        <div>
+          <h1 class="title">Screen Pitch</h1>
+        </div>
+
+        <div class="id-menu">
+          <% if logged_in? %>
+            <div class="dropdown-menu">
+              <button onclick="dropDown()" class="dropbtn">Hello, <%= current_user.name %>!</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="/my_profile/<%= current_user.id %>">My Profile</a>
+                <a href="/my_pitches">My Pitches</a>
+                <a href="/pitches/new">New Pitch</a>
+                <form action="/session" method="post">
+                <input type="hidden" name="_method" value="delete">
+                  <button>Sign Out</button>
+                </form>
+              </div>
+            </div>
+          <% elsif buyer_logged_in? %> 
+            <div class="dropdown-menu">
+              <button onclick="dropDown()" class="dropbtn">Hello, <%= current_buyer.name %>!</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="/my_profile/<%= current_buyer.id %>">My Profile</a>
+                <a href="/watch_list">My Watchlist</a>
+                <a href="/new_offer">New Offer</a>
+                <form action="/session" method="post">
+                <input type="hidden" name="_method" value="delete">
+                  <button>Sign Out</button>
+                </form>
+              </div>
+            </div>
+          <% else %>
+            <a class="all" href="/type_of_log_in">Log In</a>
+            <a class="all" href="/type_of">Sign Up</a>
+          <% end %>
+        </div>
+      </nav>
+      <div class="user-bar">
+
+      </div>
+    </header>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <p class="copy">App by Daniel Marroquín &copy; 2019</p>
+    </footer>
+  </div>
+<script src="/javascripts/application.js">
+</script>
+</body>
+</html>

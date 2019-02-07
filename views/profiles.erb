@@ -1,0 +1,7 @@
+<h1>All Writers</h1>
+
+<% @users.each do |user| %>
+    <div class="writer-box">
+    <p><a class="link" href="/profiles/<%= user.id %>"><%= user.name%></a></p>
+    </div>
+<% end %>

@@ -1,0 +1,36 @@
+<h3>Pitch Details</h3>
+
+<h2><%= @pitch.title %></h2>
+
+
+<% @users.select do |user| %>
+    <% if user.id == @pitch.user_id %>
+        <p>By <%= user.name %></p>
+    <% end %>
+<% end %>
+
+<p><%= @pitch.synopsis %></p>
+
+<% @genres.select do |genre| %>
+    <% if genre.id == @pitch.genre_id %>
+    <p><%= genre.name %></p>
+    <% end %>
+<% end %>
+
+<p><%= @pitch.structural_element %></p>
+<p><%= @pitch.film_comparison %></p>
+
+<% if logged_in? && current_user.id == @pitch.user_id %>
+    <a href="/pitches/<%= @pitch.id %>/edit">Edit Pitch</a>
+<% else %>
+    <form action="/sign_up" method="post">
+        <button onclick="upVote()" class="upvote">Upvote</button>
+    </form>
+<% end %>
+
+
+<% if logged_in? && current_user.id == @pitch.user_id %>
+    <a href="/my_pitches">My Pitches</a>
+<% else %>
+<a href="/pitches">Go Back</a>
+<% end %>

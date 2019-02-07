@@ -1,0 +1,12 @@
+<h1>All Pitches</h1>
+
+<% @pitches.each do |pitch| %>
+    <div class="pitch-box">
+    <p><a class="link" href="/pitches/<%= pitch.id %>"><%= pitch.title%></a></p>  
+    <% @users.select do |user| %>
+        <% if user.id == pitch.user_id %>
+            <p class="author">By <%= user.name %></p>
+        <% end %>
+    <% end %> 
+    </div>
+<% end %>

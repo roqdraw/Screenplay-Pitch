@@ -1,0 +1,29 @@
+<form action="/pitches/<%= @pitch.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <label for="">Title</label>
+    <input name="title" type="text" value="<%= @pitch.title %>">
+
+    <label for="">Synopsis</label>
+    <textarea name="synopsis"><%= @pitch.synopsis %></textarea>
+
+    <label for="">Genre</label>
+    <select name="genre_id">
+        <% @genres.each do |genre| %>
+        <option value="<%= genre.id %>"><%= genre.name %></option>
+        <% end %>
+    </select>
+
+    <label for="">Structural Element</label>
+    <input name="structural_element" type="text" value="<%= @pitch.structural_element %>">
+
+    <label for="">Film Comparison</label>
+    <input name="film_comparison" type="text" value="<%= @pitch.film_comparison %>">
+
+    <button>Rewrite</button>
+</form>
+
+<form action="/pitches/<%= @pitch.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>Delete</button>
+</form>
