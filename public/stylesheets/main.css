@@ -135,6 +135,10 @@ a:hover {
     color: white;
 }
 
+.all:hover {
+    color: yellow;
+}
+
 .pitch-box {
     background-color: rgb(245, 81, 106);
     width: 100%;
@@ -293,4 +297,78 @@ iframe {
 
 .pitch-link {
     color: white;
+}
+
+.number {
+    font-weight: bolder;
+}
+
+.email {
+    margin-top: 50px;
+    background-color: green;
+    width: 150px;
+    align-self: center;
+    padding: 30px 10px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.email:hover {
+    color: red;
+}
+
+.email-link {
+    color: white;
+    font-size: 15px;
+    transition: 1s;
+}
+
+.email-link:hover {
+    color: rgb(211, 255, 79);
+}
+
+.bio {
+    width: 70%;
+    align-self: center;
+}
+
+.begin {
+    margin-top: 50px;
+    align-self: center;
+    background-color: green;
+    width: 250px;
+    padding: 30px 10px;
+    border-radius: 20px;
+    transition: 1s;
+    color: white;
+}
+
+.begin:hover {
+    background-color: rgb(19, 152, 94);
+    width: 300px;
+    color: white;
+    font-size: 25px;
+}
+
+.start {
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.learn-more {
+    margin-top: 50px;
+    align-self: center;
+    background-color: green;
+    width: 250px;
+    padding: 30px 10px;
+    border-radius: 20px;
+    transition: 1s;
+    color: white;
+}
+
+.learn-more:hover {
+    background-color: rgb(19, 152, 94);
+    width: 300px;
+    color: white;
+    font-size: 25px;
 }

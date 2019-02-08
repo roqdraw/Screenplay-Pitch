@@ -5,7 +5,7 @@
 ## Screenplay Pitchers
 
 ##### Link
-https://roqdraw.github.io/Screenplay-Pitch/.
+https://blooming-depths-13108.herokuapp.com/
 
 ##### About
 An app designed for screenwriters who want to get their story pitches out noticed.
