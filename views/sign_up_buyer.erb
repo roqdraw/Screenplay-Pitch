@@ -1,6 +1,6 @@
 <% if logged_in? %>
     <p>Sign out first so we can welcome a new buyer.</p>
-    <a class="link" href="/">Go Back</a>
+    <a class="link" href="/">Home</a>
     <form action="/session" method="post">
             <input type="hidden" name="_method" value="delete">
             <button class="button">Sign Out</button>
@@ -27,5 +27,5 @@
     <button>Submit</button>
     </form>
 
-    <a class="link" href="/type_of">Go Back</a>
+    <a class="link" href="/type_of">Home</a>
 <% end %>

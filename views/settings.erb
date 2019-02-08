@@ -13,3 +13,8 @@
 </form>
 
 <p><a class="link" href="/my_profile/<%= current_user.id %>">Go Back to Profile</a></p>
+
+<form action="/settings/<%= @current_user.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>Delete</button>
+</form>

@@ -97,7 +97,7 @@ a {
 }
 
 a:hover {
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .button {
@@ -111,7 +111,7 @@ a:hover {
 }
 
 .link {
-    color: darkgreen;
+    color: rgb(255, 228, 227);
 }
 
 .link:hover {
@@ -140,21 +140,23 @@ a:hover {
 }
 
 .pitch-box {
-    background-color: rgb(245, 81, 106);
+    background-color: rgb(240, 88, 111);
     width: 100%;
     margin: 5px;
     padding: 20px 0;
-    transition: 2s;
+    transition: 0.5s;
     align-self: center;
 }
 
 .pitch-box:hover {
     background-color: darkgrey;
     cursor: pointer;
+    width: 150%;
+    border-radius: 50px;
+    font-size: 30px;
 }
 
 .writer-box {
-    background-color: rgb(250, 250, 212);
     width: 100%;
     padding: 5px;
     margin: 5px;
@@ -371,4 +373,8 @@ iframe {
     width: 300px;
     color: white;
     font-size: 25px;
+}
+
+.writer-link {
+    color: black;
 }

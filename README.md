@@ -2,6 +2,8 @@
 
 ## GA Project #2: Building a Full-stack Application
 
+---
+
 ## Screenplay Pitchers
 
 ##### Link

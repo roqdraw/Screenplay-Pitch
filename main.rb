@@ -195,6 +195,11 @@ get '/my_profile/:id' do
   erb :my_profile
 end
 
+get '/buyer_profile/:id' do
+  @buyer = Buyer.find_by(id: current_buyer.id)
+  erb :buyer_profile
+end
+
 get '/my_profile/:id/edit' do
   @user = User.find(params[:id])
   erb :my_profile_edit
@@ -221,6 +226,12 @@ put '/settings/:id' do
   user.password = params[:password]
   user.save
   redirect "/my_profile/#{params[:id]}"
+end
+
+delete '/settings/:id' do
+  @user = User.find(params[:id])
+  @user.destroy
+  redirect '/'
 end
 
 get '/my_pitches' do

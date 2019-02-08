@@ -5,19 +5,24 @@
 
 <% @users.select do |user| %>
     <% if user.id == @pitch.user_id %>
-        <p>By <%= user.name %></p>
+        <p><a href="/profiles/<%= user.id %>">By <%= user.name %></a></p>
     <% end %>
 <% end %>
 
+<h4>Synopsis</h4>
 <p><%= @pitch.synopsis %></p>
 
+<h4>Genres</h4>
 <% @genres.select do |genre| %>
     <% if genre.id == @pitch.genre_id %>
     <p><%= genre.name %></p>
     <% end %>
 <% end %>
 
+<h4>Structural Element</h4>
 <p><%= @pitch.structural_element %></p>
+
+<h4>Film Comparison</h4>
 <p><%= @pitch.film_comparison %></p>
 
 <% if logged_in? && current_user.id == @pitch.user_id %>

@@ -18,7 +18,7 @@
         </div>
 
         <div class="title-bar">
-          <h1 class="title">Screen Pitch</h1>
+          <h1 class="title">Screen Pitchers</h1>
         </div>
 
         <div class="id-menu">
@@ -39,7 +39,7 @@
             <div class="dropdown-menu">
               <button onclick="dropDown()" class="dropbtn">Hello, <%= current_buyer.name %>!</button>
               <div id="myDropdown" class="dropdown-content">
-                <a href="/my_profile/<%= current_buyer.id %>">My Profile</a>
+                <a href="/buyer_profile/<%= current_buyer.id %>">My Profile</a>
                 <a href="/watch_list">My Watchlist</a>
                 <a href="/new_offer">New Offer</a>
                 <form action="/session" method="post">
