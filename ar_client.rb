@@ -5,5 +5,6 @@ require_relative 'models/user'
 require_relative 'models/buyer'
 require_relative 'models/pitch'
 require_relative 'models/genre'
+require_relative 'models/vote'
 
 binding.pry

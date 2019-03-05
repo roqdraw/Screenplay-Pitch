@@ -18,8 +18,6 @@ CREATE TABLE pitches (
     created_at TIMESTAMP
 );
 
-    -- created_at datetime
-
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name VARCHAR(400),
@@ -36,6 +34,12 @@ CREATE TABLE buyers (
     password_digest VARCHAR(400),
     production_company VARCHAR(400),
     country VARCHAR(400)
+);
+
+CREATE TABLE votes (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER,
+    pitch_id INTEGER
 );
 
 -- CREATE TABLE country (

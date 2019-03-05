@@ -8,6 +8,7 @@ require_relative 'models/user'
 require_relative 'models/buyer'
 require_relative 'models/pitch'
 require_relative 'models/genre'
+require_relative 'models/vote'
 
 enable :sessions
 
@@ -102,6 +103,17 @@ put '/pitches/:id' do
   pitch.film_comparison = params[:film_comparison]
   pitch.save
   redirect "/pitches/#{params[:id]}"
+end
+
+post "/votes" do
+  vote = Vote.new
+  vote.user_id = current_user.id
+  vote.pitch_id = params[:pitch_id]
+  if vote.save
+    redirect "/pitches/#{like.pitch.id}"
+  else
+    "noooo..."
+  end
 end
 
 get '/type_of' do
