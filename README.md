@@ -7,7 +7,7 @@
 ## Screenplay Pitchers
 
 ##### Link
-https://blooming-depths-13108.herokuapp.com/
+https://screenplay-pitch.herokuapp.com/
 
 ##### About
 An app designed for screenwriters who want to get their story pitches out noticed.
